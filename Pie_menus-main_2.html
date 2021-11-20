@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 200px;
+    }
+    
+    #img_one img{
+        width: 300px;
+      height: 300px;
+      border: 10px solid #fff;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    #img_two img{
+        width: 300px;
+      height: 300px;
+      border: 10px solid #fff;
+      border-radius: 50%;
+      z-index: 20;
+    }
+
+    #img_three img{
+        width: 300px;
+      height: 300px;
+      border: 10px solid #fff;
+      border-radius: 50%;
+      z-index: 30;
+    }
+
+    .imges {
+      position: relative;
+      margin-left: -150px;
+    }
+
+    .imges:hover {
+      position: relative;
+      z-index: 100;
+    }
+
+    .text {
+      text-align: center;
+      font-family: 'Roboto';
+    }
+	</style>	
+</head>
+<body>
+
+  <div class="gallery">
+
+    <div class="imges">
+      <p class="text">Rose</p>
+      <div id="img_one"></div>
+    </div>
+
+    <div class="imges">
+      <p class="text">Houseplants</p>
+      <div id="img_two"></div>
+    </div>
+
+    <div class="imges">
+      <p class="text">Plants for March 8</p>
+      <div id="img_three"></div>
+    </div>
+
+  </div>
+
+<script>
+rose = Math.floor(Math.random() * 2);
+image_1 = new Array();
+    image_1[0]="https://installita.neocities.org/Flowers/rose/rose_1.jpeg"
+    image_1[1]="https://installita.neocities.org/Flowers/rose/rose_2.jpeg"
+    image_1[2]="https://installita.neocities.org/Flowers/rose/rose_3.jpeg"   
+imagez = ("<img src="+image_1[rose]+">");
+document.getElementById("img_one").innerHTML = imagez;
+
+
+
+
+
+houseplants = Math.floor(Math.random() * 2);
+image_2 = new Array();
+    image_2[0]="https://installita.neocities.org/Flowers/houseplants/houseplants_1.jpg"
+    image_2[1]="https://installita.neocities.org/Flowers/houseplants/houseplants_2.jpg"
+    image_2[2]="https://installita.neocities.org/Flowers/houseplants/houseplants_3.jpg"
+imagez_2 = ("<img src="+image_2[houseplants]+">");
+document.getElementById("img_two").innerHTML = imagez_2;
+
+
+
+
+plants_for_March_8 = Math.floor(Math.random() * 2);
+image_3 = new Array();
+    image_3[0]="https://installita.neocities.org/Flowers/plants_for_march_8/plants_for_March_8_1.jpg"
+    image_3[1]="https://installita.neocities.org/Flowers/plants_for_march_8/plants_for_March_8_2.jpg"
+    image_3[2]="https://installita.neocities.org/Flowers/plants_for_march_8/plants_for_March_8_3.jpg"  
+imagez_3 = ("<img src="+image_3[plants_for_March_8]+">");
+document.getElementById("img_three").innerHTML = imagez_3;
+    </script>
+</body>
+</html>
